@@ -1,0 +1,6 @@
+<view class="goods">
+  <!-- 展示当前点击的tab数据 -->
+  <block wx:for="{{goods}}" wx:key="index">
+    <w-goods-item class="goods-item" item="{{item}}"></w-goods-item>
+  </block>
+</view>

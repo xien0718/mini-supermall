@@ -1,0 +1,13 @@
+.goods {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 30rpx;
+}
+
+.goods-item {
+  width: 47%;
+  margin-bottom: 10rpx;
+  position: relative;
+}

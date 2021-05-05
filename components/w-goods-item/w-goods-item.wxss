@@ -1,0 +1,39 @@
+.goods-desc{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10rpx;
+}
+.goods-item{
+  color: #333333;
+  margin-bottom: 85rpx;
+}
+.goods-item>image {
+  width: 100%;
+  border-radius: 10rpx;
+}
+
+.goods-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+}
+
+.goods-detail {
+  font-size: 26rpx;
+  text-align: center;
+}
+
+.goods-detail .price {
+  color: #ff5777;
+}
+
+
+.goods-detail .icon {
+  position: relative;
+  top: 6rpx;
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 25rpx;
+}

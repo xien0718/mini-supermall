@@ -1,0 +1,38 @@
+<!-- 1.轮播图 -->
+<w-swiper list="{{banners}}"></w-swiper>
+<!-- 2.推荐 -->
+<w-recommends list="{{recommends}}" bind:imgLoad="imgLoad"></w-recommends>
+<!-- 3.本周推荐 -->
+<w-popular></w-popular>
+
+
+
+
+<!-- 4.我的tab-control -->
+<!-- <w-tab-control id="tab-control" list="{{['流行','新款','精选']}}" bind:itemClick="itemClick"
+  class="{{isTabFixed ? 'fixed' : ''}}"></w-tab-control>
+<w-tab-control list="{{['流行','新款','精选']}}" bind:itemClick="itemClick" wx:if="{{isTabFixed}}">
+</w-tab-control> -->
+
+
+<!-- 4.单个的tabControl：大佬的方法 -->
+<view class="tab-outer">
+  <w-tab-control id="tab-control" list="{{['流行','新款','精选']}}" bind:itemClick="itemClick"
+    class="{{isTabFixed ? 'fixed' : ''}}"></w-tab-control>
+</view>
+
+<!-- 5.商品数据：大佬的方法 -->
+<!-- <w-goods wx:if="{{currentIndex===0}}" goods="{{goods['pop'].list}}"></w-goods> -->
+<!-- <w-goods wx:if="{{currentIndex===1}}" goods="{{goods['new'].list}}"></w-goods> -->
+<!-- <w-goods wx:if="{{currentIndex===2}}" goods="{{goods['sell'].list}}"></w-goods> -->
+
+
+
+
+
+<!-- 5.商品数据：why的方法 -->
+<w-goods goods="{{goods[currentType].list}}"></w-goods>
+<!-- 6.回到顶部 -->
+<!-- hidden对于自定义组件是无效的 -->
+<!-- 用onPageScroll函数的参数options获取滚动的距离，当滚动到某个距离时，isShow改为true -->
+<w-back-top wx:if="{{isShow}}"></w-back-top>
